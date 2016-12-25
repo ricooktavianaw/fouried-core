@@ -13,8 +13,8 @@
 add_action('init', 'productgallery', 0);
 function productgallery() {
     $labels = array(
-        'name' => _x('productgallery', 'Post Type General Name', 'fouried'),
-        'singular_name' => _x('productgallery', 'Post Type Singular Name', 'fouried'),
+        'name' => _x('Product Gallery', 'Post Type General Name', 'fouried'),
+        'singular_name' => _x('Product Gallery', 'Post Type Singular Name', 'fouried'),
         'menu_name' => __('Product', 'fouried'),
         'parent_item_colon' => __('Parent Product:', 'fouried'),
         'all_items' => __('All Products', 'fouried'),
@@ -35,10 +35,6 @@ function productgallery() {
         'hierarchical' => false,
         'has_archive' => true,
         'public' => true,
-        'show_ui' => true,
-        'show_in_menu' => true,
-        'show_in_nav_menus' => true,
-        'show_in_admin_bar' => true,
         'menu_position' => 5,
         'can_export' => true,
         'has_archive' => true,
