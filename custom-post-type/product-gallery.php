@@ -7,8 +7,8 @@
  * @since   fouried 1.0
  */
 
-if ( ! function_exists( 'fouried_register_produtgallery_post' ) ) {
-    function fouried_register_produtgallery_post() {
+if ( ! function_exists( 'fouried_register_product_post' ) ) {
+    function fouried_register_product_post() {
         $labels = array(
             'name' => _x('Product Gallery', 'Post Type General Name', 'fouried'),
             'singular_name' => _x('Product Gallery', 'Post Type Singular Name', 'fouried'),
@@ -30,7 +30,6 @@ if ( ! function_exists( 'fouried_register_produtgallery_post' ) ) {
             'labels' => $labels,
             'supports' => array('title', 'thumbnail', 'editor', 'excerpt'),
             'hierarchical' => false,
-            'has_archive' => true,
             'public' => true,
             'menu_position' => 5,
             'can_export' => true,
@@ -41,7 +40,7 @@ if ( ! function_exists( 'fouried_register_produtgallery_post' ) ) {
             'menu_icon' => 'dashicons-format-gallery',
             'rewrite' => 'true',
         );
-        register_post_type('productgallery', $args);
+        register_post_type('product', $args);
     }
-    add_action('init', 'fouried_register_produtgallery_post', 0);
+    add_action('init', 'fouried_register_product_post', 0);
 }
